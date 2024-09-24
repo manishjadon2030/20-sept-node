@@ -1,0 +1,49 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+    <div class="alert bg-success my-3">
+      <h4 class="text-center" style="color: white">Students List</h4>
+    </div>
+  </div>
+  <div class="container d-flex">
+    <table class="table">
+      <thead>
+        <tr>
+         
+          <th scope="col">Roll no</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">father name</th>
+          <th scope="col">Adhar card no </th>
+          <th scope="col">Mobile No</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach((student)=>{ %>
+          <tr>
+        
+              <td><%=student.rollno%></td>
+              <td><%=student.firstName%></td>
+              <td><%=student.lastName%></td>
+              <td><%=student.fatherName%></td>
+              <td><%=student.adharCardno %></td>
+              <td><%=student.mobileNo%></td>
+               <td><a href="/student/edit/page/<%= student._id %>" class="btn btn-warning" >Edit</a></td>
+             </tr>
+        
+        <% })%>
+      </tbody>
+    </table>
+  
+
+
+    </div>
+  </div>
+
+<%- include('./base/footer.ejs') %>
+
+
+
+
+

@@ -10,5 +10,11 @@ router.get('/',(req,res)=>{
 router.post('/add/student',(req,res)=>{
     controller.addstudent(req,res)
 })
+router.get('/students',(req,res)=>{
+    controller.getStudents(req,res)
+})
+router.get('/student/edit/page/:id',(req,res)=>{
+    controller.getstudentforEdit(req,res)
+})
 
 module.exports = router
